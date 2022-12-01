@@ -6,9 +6,6 @@ router.get("/", async (req, res) => {
     // Shows all posts
     try {
       const postData = await Post.findAll({
-        where: {
-          isPrivate: false,
-        },
         include: [User],
       });
   
