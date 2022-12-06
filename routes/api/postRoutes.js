@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 //get post by id
 router.get("/:id", (req, res) => {
   Post.findByPk(req.params.id,{
-    include:[User, Comment]
+    include:[User, {model:Comment, include:[User]}]
   })
     .then((post) => {
       res.json(post);

@@ -9,7 +9,14 @@
     <div class="d-grid gap-3" id="post-details">
 
         {{#each posts}}
-        {{> my-post }}
+        {{> my-post-preview }}
         {{/each}}
     </div>
+    
+    <div class="mx-auto new-post-button" style="width: 200px;">
+        <a class="btn btn-primary" href="/new-post" role="button">+ New Post</a>
+    </div>
 </div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/comment.js"></script>

@@ -56,13 +56,24 @@ router.get("/signup", (req, res) => {
   });
 });
 
+//session timeout
+// router.get("/users/", (req, res) => {
+//   if (!req.session.loggedIn) {
+//     return res.redirect(`/login`);
+//   }
+//   res.render("login", {
+//     loggedIn: false,
+//     userId: null,
+//   });
+// });
+
 //dashboard
 router.get("/users/:id", (req, res) => {
   if (!req.session.loggedIn) {
     return res.redirect(`/login`);
   }
   User.findByPk(req.params.id, {
-    include: [Post],
+    include: [Post, Comment],
   }).then((foundUser) => {
     const hbsUser = foundUser.get({ plain: true });
     hbsUser.loggedIn = true;
@@ -81,7 +92,13 @@ router.get("/post/:id", async (req, res) => {
       where: {
         id: req.params.id,
       },
-      include: [User, Comment],
+      include: [
+        User,
+        {
+          model: Comment,
+          include: User,
+        },
+      ],
     });
 
     if (postData) {
@@ -100,6 +117,14 @@ router.get("/post/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// new-post
+router.get("/new-post", (req, res) => {
+  if (!req.session.loggedIn) {
+    return res.redirect(`/login`);
+  }
+  res.render("new-post");
 });
 
 module.exports = router;

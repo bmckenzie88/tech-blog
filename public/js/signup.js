@@ -1,4 +1,4 @@
-const signupForm = document.querySelector(".signup-form");
+const signupForm = document.getElementById("signup-form");
 
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -21,7 +21,6 @@ signupForm.addEventListener("submit", (e) => {
   })
     .then((res) => {
       if (res.ok) {
-        alert("Sign Up Successful");
         return res.json();
       } else {
         alert("Sign Up failed");

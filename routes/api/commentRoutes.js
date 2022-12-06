@@ -41,11 +41,12 @@ router.post("/:id", async (req, res) => {
     });
     res.status(200).json(newComment);
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
 
-//update post
+//update comment
 router.put("/:id", (req, res) => {
     if (!req.session.loggedIn) {
       return res.status(401).json({message: "must be logged in"});

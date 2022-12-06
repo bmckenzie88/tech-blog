@@ -33,13 +33,13 @@ Comment.init(
     createdAt: {
       type: DataTypes.DATE,                 
     get() {
-          return moment(this.getDataValue('createdAt')).format('DD/MM/YYYY h:mm:ss');
+          return moment(this.getDataValue('createdAt')).format('MM/DD/YYYY');
       }
   },
   updatedAt: {
       type: DataTypes.DATE,
       get() {
-          return moment(this.getDataValue('updatedAt')).format('DD/MM/YYYY h:mm:ss');
+          return moment(this.getDataValue('updatedAt')).format('MM/DD/YYYY');
       }
   }
   },

@@ -4,7 +4,7 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const userObj = {
-    email: document.querySelector("#email-login").value,
+    username: document.querySelector("#username-login").value,
     password: document.querySelector("#password-login").value,
   };
 
@@ -17,7 +17,6 @@ loginForm.addEventListener("submit", (e) => {
   })
     .then((res) => {
       if (res.ok) {
-        alert("Login successful");
         return res.json();
       } else {
         alert("Login failed");
@@ -25,7 +24,6 @@ loginForm.addEventListener("submit", (e) => {
       }
     })
     .then((data) => {
-      location.href = `/dashboard`;
+      location.href = `/users/${data.id}`;
     });
 });
-
