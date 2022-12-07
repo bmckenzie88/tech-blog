@@ -14,6 +14,12 @@ This application is a CMS-style blog site similar to a Wordpress site, where dev
 
 ![Screenshot showing the application login page](./assets/Screenshot%202022-12-06%20at%203.57.49%20PM.png)
 
+![Screenshot showing the application signup page](./assets/Screenshot%202022-12-06%20at%207.57.46%20PM.png)
+
+![Screenshot showing the create-post page](./assets/Screenshot%202022-12-06%20at%208.01.59%20PM.png)
+
+![Screenshot showing the newly created post with a comment added to it](./assets/Screenshot%202022-12-06%20at%208.03.31%20PM.png)
+
 - [Contributing](#contributing)
 
 - [Questions](#questions)
