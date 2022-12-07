@@ -14,14 +14,13 @@
       for="textarea"
       class="form-label"
     >{{post.body}}</label>
-  </div>
 </div>
 <div class="card" id="comments">
   <div class="container d-flex card-header justify-content-between">
     <h6>Comments</h6>
   </div>
         {{> comments this }}
-<textarea class="form-control" id="textarea" rows="3" placeholder="Leave a comment here"></textarea>
+<textarea class="comment-body" id="textarea" rows="3" placeholder="Leave a comment here"></textarea>
 </div>
 <div>
    <input class="my-2 btn btn-primary" type="submit" value="Leave Comment">

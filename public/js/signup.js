@@ -6,7 +6,6 @@ signupForm.addEventListener("submit", (e) => {
 
   const userObj = {
     username: document.querySelector(".name-signup").value,
-    email: document.querySelector(".email-signup").value,
     password: document.querySelector(".password-signup").value,
   };
 

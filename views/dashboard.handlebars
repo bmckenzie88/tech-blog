@@ -9,7 +9,20 @@
     <div class="d-grid gap-3" id="post-details">
 
         {{#each posts}}
-        {{> my-post-preview }}
+        <div class="card" id="post-details">
+  <div class="d-flex card-header justify-content-between">
+    <a href="/post/{{id}}"><h2>{{title}}</h2></a>
+    <h5>Posted on {{createdAt}} </h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{body}}</p>
+  </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      {{!-- <button class="btn btn-primary me-md-2 m-2" type="button">Edit Post</button> --}}
+      <button class="delete-button btn btn-primary m-2" data-postId="{{id}}" type="button">Delete Post</button>
+    </div>
+</div>
+        {{!-- {{> my-post-preview }} --}}
         {{/each}}
     </div>
     

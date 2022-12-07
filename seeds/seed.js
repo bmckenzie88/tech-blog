@@ -75,12 +75,10 @@ const seedDatabase = async () => {
     // Get some random thought objects using a helper function that we imported from ./data
     
     const username = names[i];
-    const email = `${username}@gmail.com`;
     const password = "password";
 
     users.push({
       username,
-      email,
       password,
     });
   }

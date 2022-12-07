@@ -10,6 +10,10 @@ This application is a CMS-style blog site similar to a Wordpress site, where dev
 
 - [Usage](#usage)
 
+- [Example](#example)
+
+![Screenshot showing the application login page](./assets/Screenshot%202022-12-06%20at%203.57.49%20PM.png)
+
 - [Contributing](#contributing)
 
 - [Questions](#questions)
@@ -19,6 +23,11 @@ This application is a CMS-style blog site similar to a Wordpress site, where dev
 ## Usage
 
 When first visiting the website, a user can view the homepage where all posts are visible. They can click on an individual post to see any comments that have been left on that post. In order to leave a comment on a post, they must be logged in, which they can do by clicking on the login tab in the navbar from any page view. If they are visiting the page for the first time, they must signup instead of logging in. Once logged in, they can view their dashboard which will display all of the posts they have created, and be given the option to create a new post.
+
+
+## Example
+
+[Deployed Website](https://salty-earth-92336.herokuapp.com/)
 
 
 ## Contributing

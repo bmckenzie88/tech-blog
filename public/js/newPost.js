@@ -1,12 +1,12 @@
-const newpostForm = document.getElementById("new-post-form");
+const newPostForm = document.getElementById("new-post-form");
 
-newpostForm.addEventListener("submit", (e) => {
+newPostForm.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("prevent default");
 
   const postObj = {
-    title: document.querySelector(".title-input").value,
-    body: document.querySelector(".body-input").value,
+    title: document.querySelector(".post-title").value,
+    body: document.querySelector(".post-body").value,
   };
 
   console.log(JSON.stringify(postObj));
@@ -22,11 +22,10 @@ newpostForm.addEventListener("submit", (e) => {
       if (res.ok) {
         return res.json();
       } else {
-        alert("Post Creation failed");
-        // location.reload();
+        alert("Post creation failed");
       }
     })
     .then((data) => {
-      location.href = `/users/${data.id}`;
+      location.replace(`/users/${data.post_creator}`);
     });
 });

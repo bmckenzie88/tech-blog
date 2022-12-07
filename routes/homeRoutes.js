@@ -124,7 +124,15 @@ router.get("/new-post", (req, res) => {
   if (!req.session.loggedIn) {
     return res.redirect(`/login`);
   }
-  res.render("new-post");
+  res.render("new-post", {
+    loggedIn: req.session.loggedIn,
+    userId: req.session.userId,
+    sessId: req.sessionID,
+  });
 });
+
+router.get("*",(req,res) =>{
+  res.render("404")
+})
 
 module.exports = router;
